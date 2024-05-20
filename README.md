@@ -10,7 +10,7 @@ BY Chai aur Code
 -   app --> Config Cookies, urlencode
 -   constants --> enums, DB-name
 
-### Directory Structure
+### Directory Structure (src)
 
 -   DB
 -   Models
@@ -50,6 +50,8 @@ BY Chai aur Code
 
 ## Project (Video #6)
 
-- Backend for YouTube and Twitter Clone.
-- Includes most of the facilities.
-- Project Model: ![This](./assets/img/YouTube%20Backend.png)
+-   Professional Grade Code and Practices.
+-   Backend for YouTube and Twitter Clone.
+-   Includes most of the facilities.
+-   Project Model: ![Structure](./public/assets/img/YouTube%20Backend.png)
+-   Installed *Prettier* for common code Format while pair programming
