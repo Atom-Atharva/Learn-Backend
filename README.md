@@ -152,6 +152,7 @@ const app = express();
 -   Wrap All Controller in our async handler (HIGHER ORDER FUNCTION)
 -   Logic Building
 -   Register a user: (Steps) (See user.controller.js)
+
     -   Take Input from the user
     -   Validation - NOT EMPTY
     -   Check user if already exist: username, email
@@ -164,4 +165,25 @@ const app = express();
     -   Return response
     -   Else error
 
-- Multer is used to Handle files see user.routes.js
+-   Multer is used to Handle files see user.routes.js
+
+## Access Tokens and Refresh Tokens (Video #14)
+
+-   Logic Building
+-   Login a User: (Steps) (See user.controller.js)
+
+    -   Bring Data from REQ Body
+    -   Check For Username or email
+    -   IF Present then
+    -   Check Password
+    -   If Match
+    -   Generate Tokens
+    -   Give it to Client --> Cookies
+    -   Use it for Authentication
+
+-   Logout a User: (Steps) (See user.controller.js)
+    -   This Route come under secure routes
+    -   Need Authentication before execution thus created auth.middleware.js
+    -   Need User --> Use Middleware (See auth.middleware.js)
+    -   Remove Cookies
+    -   Delete RefreshToken from DB
