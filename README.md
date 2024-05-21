@@ -101,3 +101,10 @@ const app = express();
 -   Installed mongooseAggregatePaginate for effective aggreagation and serching used as plugin for videoSchema
 -   Installed bcrypt, jsonwebtoken
 -   Bcrypt used to hash passwords check user.models.js for comparision and storing passwords middleware and methods.
+-   JWT for storing user token work as key for authenticating user --> Will Discuss Later about functionality, usage.
+
+## File Upload (Video #10)
+
+-   File Upload using MULTER and Upload on Cloudinary.
+-   Made utility to upload any file on cloudinary. see utils/cloudinary.js
+-   Multer used for file-handling used as middleware. see middleware/multer.js
