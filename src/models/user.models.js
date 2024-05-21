@@ -46,7 +46,7 @@ const userSchema = new Schema(
             type: String,
         },
     },
-    { timestamp: true },
+    { timestamps: true },
 );
 
 // Password Encrypt

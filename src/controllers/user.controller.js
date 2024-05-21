@@ -36,7 +36,12 @@ const registerUser = asyncHandler(async (req, res) => {
 
     // Handle Files --> With the help of multer: Add more fields to req
     const avatarLocalPath = req.files?.avatar[0]?.path;
-    const coverImageLocalPath = req.files?.coverImage[0]?.path;
+
+    let coverImageLocalPath;
+    if (req?.files?.coverImage) {
+        coverImageLocalPath = req.files?.coverImage[0]?.path;
+    }
+    // console.log(req.files);
 
     if (!avatarLocalPath) {
         throw new ApiError(400, "Avatar File is Required");
