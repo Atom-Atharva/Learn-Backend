@@ -94,3 +94,10 @@ const app = express();
 -   Setting up async Handler --> ./src/utils/asyncHandler
 -   API Error Handling --> Production Practices NOT RELEVENT RIGHT NOW!
 -   Similarly for API Response --> Main Motive to have a common sturcture for calls
+
+## Model and Schema (Video #9)
+
+-   On fields having more usecase of searching, put index:true
+-   Installed mongooseAggregatePaginate for effective aggreagation and serching used as plugin for videoSchema
+-   Installed bcrypt, jsonwebtoken
+-   Bcrypt used to hash passwords check user.models.js for comparision and storing passwords middleware and methods.
