@@ -147,6 +147,21 @@ const app = express();
     -   4XX : Client Error
     -   5XX : Server Error
 
-## Routers and Controllers (Video #12)
+## Routers and Controllers (Video #12 and #13)
 
--   Wrap All Controller in our async handler
+-   Wrap All Controller in our async handler (HIGHER ORDER FUNCTION)
+-   Logic Building
+-   Register a user: (Steps) (See user.controller.js)
+    -   Take Input from the user
+    -   Validation - NOT EMPTY
+    -   Check user if already exist: username, email
+    -   Check for images
+    -   Check for avatar
+    -   Upload them to cloudinary, avatar again check
+    -   Create a User Object --> Create entry in DB
+    -   Remove Password, Refresh Token Field
+    -   Check for user creation
+    -   Return response
+    -   Else error
+
+- Multer is used to Handle files see user.routes.js
