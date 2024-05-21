@@ -9,7 +9,7 @@ const app = express();
 app.use(
     cors({
         origin: process.env.CORS_ORIGIN,
-        credentials: ture,
+        credentials: true,
     }),
 );
 
@@ -28,5 +28,11 @@ app.use(express.static("public"));
 
 // CRUD on Cookies of user
 app.use(cookieParser());
+
+// Routes
+import userRouter from "./routes/user.routes.js";
+
+// Routes Declaration
+app.use("/api/v1/users", userRouter); //URL struct: http://localhost:8080/api/v1/users/userRoutes
 
 export { app };

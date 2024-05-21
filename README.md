@@ -112,6 +112,7 @@ const app = express();
 ## HTTP Fundamentals (Video #11)
 
 -   HTTP Headers:
+
     -   METADATA: DATA KA DATA.
     -   Caching, Authentication, State Management
     -   Category:
@@ -119,28 +120,33 @@ const app = express();
         -   Response Headers: From Server
         -   Representation Headers: Encoding/Compression (Format)
         -   Payload Header: Data
-    - Most Common Headers:
-        - Accept: application/json
-        - User-Agent (For Device, browser)
-        - Authorization (For Tokens)
-        - Content-Type
-        - Cookie
-        - Cache-Control
+    -   Most Common Headers:
+        -   Accept: application/json
+        -   User-Agent (For Device, browser)
+        -   Authorization (For Tokens)
+        -   Content-Type
+        -   Cookie
+        -   Cache-Control
 
-- HTTP METHODs:
-    - GET
-    - HEAD (Only Head)
-    - POST
-    - UPDATE
-    - DELETE
-    - PUT (Replace)
-    - PATCH (Part is Changed)
-    - OPTIONS
-    - TRACE
+-   HTTP METHODs:
 
-- HTTP Status Code:
-    - 1xx : Information
-    - 2XX : Sucess
-    - 3XX : Redirection
-    - 4XX : Client Error
-    - 5XX : Server Error
+    -   GET
+    -   HEAD (Only Head)
+    -   POST
+    -   UPDATE
+    -   DELETE
+    -   PUT (Replace)
+    -   PATCH (Part is Changed)
+    -   OPTIONS
+    -   TRACE
+
+-   HTTP Status Code:
+    -   1xx : Information
+    -   2XX : Sucess
+    -   3XX : Redirection
+    -   4XX : Client Error
+    -   5XX : Server Error
+
+## Routers and Controllers (Video #12)
+
+-   Wrap All Controller in our async handler
