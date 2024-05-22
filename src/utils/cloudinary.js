@@ -16,7 +16,7 @@ const uploadOnCloudinary = async (localFilePath) => {
         //upload file on cloudinary
         const response = await cloudinary.uploader.upload(localFilePath, {
             folder: "Learn-Backend",
-            resource_type: "auto"
+            resource_type: "auto",
         });
 
         //file has been uploaded successfully
@@ -33,6 +33,35 @@ const uploadOnCloudinary = async (localFilePath) => {
     }
 };
 
+const deleteOnCloudinary = async (oldFileURL) => {
+    try {
+        // Check If Exist
+        if (!oldFileURL) {
+            return;
+        }
+
+        // Extract Public ID from URL
+        // http://res.cloudinary.com/dk3rw649k/image/upload/v1716414490/Learn-Backend/xulhnnpqwxho8to8blgp.jpg
+        const urlParts = oldFileURL.split("/");
+        const fileName =
+            urlParts[urlParts.length - 2] + "/" + urlParts[urlParts.length - 1];
+        const publicIdWithFormat = fileName.split(".")[0]; // Learn-Backend/xulhnnpqwxho8to8blgp
+
+        // Remove From Cloudinary
+        await cloudinary.uploader.destroy(
+            publicIdWithFormat,
+            function (error, result) {
+                console.log(result);
+            },
+        );
+
+        return;
+    } catch (error) {
+        console.log("File Failed To Upload: ", error);
+        return;
+    }
+};
+
 // cloudinary.uploader.upload(
 //     "https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
 //     { public_id: "olympic_flag" },
@@ -41,4 +70,4 @@ const uploadOnCloudinary = async (localFilePath) => {
 //     },
 // );
 
-export { uploadOnCloudinary };
+export { uploadOnCloudinary, deleteOnCloudinary };

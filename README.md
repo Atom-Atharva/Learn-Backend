@@ -190,15 +190,25 @@ const app = express();
     -   Delete RefreshToken from DB
 
 -   Use of Refresh Token:
+
     -   When user is needed to access protected api, authentication is required.
     -   Access Token is used to prove authentication for the user.
     -   As Refresh Token is valid for longer period, thus on Expiring of Access Token user authentication is a problem
     -   Here With Help of API, one another API is hit to regenerate access token with refresh token.
-    - Steps involved:
-        - Access Cookies
-        - Check Token
-        - Verify Token
-        - Check User
-        - Match Token
-        - Generate New Tokens
-        - Send in form of cookies
+    -   Steps involved:
+        -   Access Cookies
+        -   Check Token
+        -   Verify Token
+        -   Check User
+        -   Match Token
+        -   Generate New Tokens
+        -   Send in form of cookies
+
+-   Some More Logic Building Exercise
+
+    -   Change Password Controller
+    -   Account Details Controller
+    -   Get Current User Details
+    -   Avatar and CoverImage Update Controller --> Need to Delete Existing Image From Cloudinary (cloudinary.utils.js)
+
+-   Subscription Schema
