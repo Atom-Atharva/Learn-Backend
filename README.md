@@ -167,7 +167,7 @@ const app = express();
 
 -   Multer is used to Handle files see user.routes.js
 
-## Access Tokens and Refresh Tokens (Video #14)
+## Access Tokens and Refresh Tokens (Video #14 - 20)
 
 -   Logic Building
 -   Login a User: (Steps) (See user.controller.js)
@@ -212,3 +212,12 @@ const app = express();
     -   Avatar and CoverImage Update Controller --> Need to Delete Existing Image From Cloudinary (cloudinary.utils.js)
 
 -   Subscription Schema
+
+    -   Creating a new Schema for the Subscription as it would be easy to filter out data while searching for particular model
+    -   Aggregation Pipelines: (SEE user.controller.js/getUserChannelProfile())
+        -   One or More Steps.
+        -   Document from one stage to other stages.
+
+-   Logic Building Exercise
+    -   Get Watch History (See user.controller.js)
+        -   Used Nested Aggregate Pipelines, there might be someother ways, think before doing.
