@@ -158,11 +158,18 @@ const loginUser = asyncHandler(async (req, res) => {
 
 const logoutUser = asyncHandler(async (req, res) => {
     // Delete RefreshToken from DB
-    await User.findByIdAndUpdate(req.user._id, {
-        $set: {
-            refreshToken: undefined,
+    await User.findByIdAndUpdate(
+        req.user._id,
+        {
+            $unset: {
+                // This remove the field from the document
+                refreshToken: 1,
+            },
         },
-    });
+        {
+            new: true,
+        },
+    );
 
     // Cookies Options
     const options = {
